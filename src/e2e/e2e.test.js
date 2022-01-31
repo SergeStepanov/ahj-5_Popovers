@@ -22,8 +22,8 @@ describe('popover', () => {
     });
 
     browser = await puppetteer.launch({
-      headless: false, // show gui
-      slowMo: 250,
+      // headless: false, // show gui
+      // slowMo: 250,
       // devtools: true, // show devTools
     });
     page = await browser.newPage();
