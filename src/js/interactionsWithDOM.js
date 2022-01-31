@@ -5,7 +5,12 @@ export default function interactionsWithDOM() {
 
   btn.addEventListener('click', (event) => {
     const popover = document.querySelector('.popover');
-    if (!popover) createPopover(event);
-    else popover.remove();
+    if (!popover) {
+      createPopover(event);
+      btn.classList.add('toggle');
+    } else {
+      popover.remove();
+      btn.classList.remove('toggle');
+    }
   });
 }

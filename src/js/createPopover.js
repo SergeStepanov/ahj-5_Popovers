@@ -13,7 +13,7 @@ export default function createPopover(event) {
 
   event.target.offsetParent.appendChild(popover);
   popover.style.top = `${event.target.offsetTop - popover.offsetHeight}px`;
-  popover.style.left = `${
-    event.target.offsetWidth / 2 - popover.offsetHeight / 2
+  popover.style.left = `${event.target.offsetLeft
+    + event.target.offsetWidth / 2 - popover.offsetWidth / 2
   }px`;
 }

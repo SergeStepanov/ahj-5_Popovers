@@ -7,8 +7,9 @@
     "start": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint .",
-    "test": "jest --coverage",
-    "coverage": "jest",
+    "test": "jest --testPathPattern=./src/",
+    "coverage": "jest --testPathPattern=./src/ --coverage",
+    "e2e": "jest --testPathPattern=./src/e2e",
     "doc": "jsdoc -c jsdoc.conf.json",
     "preshow:coverage": "yarn coverage",
     "show:coverage": "live-server coverage/lcov-report",
@@ -27,7 +28,7 @@
     "url": "https://github.com/SergeStepanov/ahj-5_Popovers/issues"
   },
   "homepage": "https://github.com/SergeStepanov/ahj-5_Popovers#readme",
-    "devDependencies": {
+  "devDependencies": {
     "@babel/cli": "^7.16.8",
     "@babel/core": "^7.16.10",
     "@babel/preset-env": "^7.16.10",
@@ -45,6 +46,7 @@
     "jest": "^27.4.7",
     "live-server": "^1.1.0",
     "mini-css-extract-plugin": "^2.5.2",
+    "puppeteer": "^13.1.2",
     "raw-loader": "^4.0.2",
     "terser-webpack-plugin": "^5.3.0",
     "url-loader": "^4.1.1",
@@ -56,5 +58,4 @@
   "dependencies": {
     "core-js": "^3.20.3"
   }
-
 }
